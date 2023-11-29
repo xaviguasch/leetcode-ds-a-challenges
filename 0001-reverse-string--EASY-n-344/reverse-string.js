@@ -20,7 +20,24 @@
  * @param {character[]} s
  * @return {void} Do not return anything, modify s in-place instead.
  */
-var reverseString = function (s) {}
+var reverseString = function (s) {
+  // SOLUTION USING TWO POINTERS PATTERN -- TIME: 0(N)  SPACE 0(1)
+  let left = 0
+  let right = s.length - 1
+
+  while (left < right) {
+    let last = s[right]
+    let first = s[left]
+
+    s[left] = last
+    s[right] = first
+
+    left++
+    right--
+  }
+
+  return s
+}
 
 console.log(reverseString(['h', 'e', 'l', 'l', 'o']))
 // Output: ["o","l","l","e","h"]
