@@ -30,25 +30,23 @@ var sortedSquares = function (nums) {
   const resultArr = []
 
   while (left <= right) {
-    const squaredLeft = nums[left] ** 2
-    const squaredRight = nums[right] ** 2
+    const squaredLeft = Math.pow(nums[left], 2)
+    const squaredRight = Math.pow(nums[right], 2)
 
-    console.log('squaredLeft: ', squaredLeft)
-    console.log('squaredRight ', squaredRight)
+    // console.log('squaredLeft: ', squaredLeft)
+    // console.log('squaredRight ', squaredRight)
 
     if (squaredLeft >= squaredRight) {
-      console.log('squaredLeft is bigger')
-
+      // console.log('squaredLeft is bigger')
       resultArr.unshift(squaredLeft)
-
       left++
     } else {
-      console.log('squaredRight is bigger')
+      // console.log('squaredRight is bigger')
       resultArr.unshift(squaredRight)
       right--
     }
 
-    console.log('resultArr: ', resultArr)
+    // console.log('resultArr: ', resultArr)
   }
 
   return resultArr
