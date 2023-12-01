@@ -35,6 +35,28 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function (numbers, target) {}
+var twoSum = function (numbers, target) {
+  let left = 0
+  let right = numbers.length - 1
 
-console.log(twoSum([2, 7, 11, 15]))
+  const resultArr = []
+
+  while (left <= right) {
+    console.log('left: ', left)
+    console.log('right: ', right)
+    if (numbers[left] + numbers[right] === target) {
+      resultArr.push(left + 1)
+      resultArr.push(right + 1)
+
+      return resultArr
+    } else if (numbers[left] + numbers[right] < target) {
+      left++
+    } else {
+      right--
+    }
+  }
+}
+
+// NOTE: Weird thing about index 0 now being index 1, and same for index 1 now being index 2
+
+console.log(twoSum([2, 7, 11, 15], 9))
