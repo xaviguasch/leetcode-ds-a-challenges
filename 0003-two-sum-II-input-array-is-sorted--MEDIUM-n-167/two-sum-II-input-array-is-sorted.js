@@ -60,3 +60,5 @@ var twoSum = function (numbers, target) {
 // NOTE: Weird thing about index 0 now being index 1, and same for index 1 now being index 2
 
 console.log(twoSum([2, 7, 11, 15], 9))
+
+// NOTE: Two Pointers pattern

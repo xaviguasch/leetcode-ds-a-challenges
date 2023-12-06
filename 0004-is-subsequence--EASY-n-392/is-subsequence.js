@@ -41,3 +41,5 @@ var isSubsequence = function (s, t) {
 
 console.log(isSubsequence('abc', 'ahbgdc'))
 console.log(isSubsequence('"axc"', 'ahbgdc'))
+
+// NOTE: Two Pointers pattern
